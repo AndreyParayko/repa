@@ -1,50 +1,49 @@
 import React from "react";
 import Book from "./Images/Book.png";
-import './Card';
 const Card = () => {
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-sm my-5">
-          <div class="card" style={{ width: "18rem" }}>
-            <img src={Book} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Book title</h5>
-              <p class="card-text">
+    <div className="container">
+      <div className="row">
+        <div className="col-sm my-5">
+          <div className="card" style={{ width: "18rem" }}>
+            <img src={Book} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">Book title</h5>
+              <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="#" class="btn btn-primary">
+              <a href="#" className="btn btn-primary">
                 More
               </a>
             </div>
           </div>
         </div>
-        <div class="col-sm my-5">
-          <div class="card" style={{ width: "18rem" }}>
-            <img src={Book} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Book title</h5>
-              <p class="card-text">
+        <div className="col-sm my-5">
+          <div className="card" style={{ width: "18rem" }}>
+            <img src={Book} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">Book title</h5>
+              <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="#" class="btn btn-primary">
+              <a href="#" className="btn btn-primary">
                 More
               </a>
             </div>
           </div>
         </div>
-        <div class="col-sm my-5">
-          <div class="card" style={{ width: "18rem" }}>
-            <img src={Book} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Book title</h5>
-              <p class="card-text">
+        <div className="col-sm my-5">
+          <div className="card" style={{ width: "18rem" }}>
+            <img src={Book} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">Book title</h5>
+              <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="#" class="btn btn-primary">
+              <a href="#" className="btn btn-primary">
                 More
               </a>
             </div>

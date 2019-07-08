@@ -10,12 +10,13 @@ import Content from './components/Content';
 function App() {
   return (
 
-    <div style={{ height: "100vh" }}>
+    <div className="fullsize">
       <Header />
-      <Card />
-      <Pagination />
+      <Content />
+      {/*<Card />
+      <Pagination />*/}
       <Footer />
-      {/*<Content />*/}
+      
     </div>
 
   );
