@@ -1,11 +1,11 @@
 import React from "react";
-import Book from "./Images/Book.png";
-const Card = () => {
+import Book from "../../assets/Images/Book.png"
+const BooksPage = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-sm my-5">
-          <div className="card" style={{ width: "18rem" }}>
+        <div className="col-md-4 my-5">
+          <div className="card">
             <img src={Book} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Book title</h5>
@@ -19,8 +19,8 @@ const Card = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm my-5">
-          <div className="card" style={{ width: "18rem" }}>
+        <div className="col-md-4 my-5">
+          <div className="card">
             <img src={Book} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Book title</h5>
@@ -34,8 +34,8 @@ const Card = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm my-5">
-          <div className="card" style={{ width: "18rem" }}>
+        <div className="col-md-4 my-5">
+          <div className="card" >
             <img src={Book} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Book title</h5>
@@ -54,4 +54,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default BooksPage;
