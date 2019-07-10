@@ -7,14 +7,36 @@ body {
   min-height: 100%;
 }
 
-footer {
-  background-color: #343a40;
-  bottom: 0;
-  position: relative;
-  width: 100vw;
+.footer {
+  background: #343a40;
+  padding: 10px 0;
+}
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
 }
 
 .content {
   margin-bottom: 70px;
   margin-top: 70px;
+}
+.loader {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.homeImage{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#bottom {
+  margin-top: 20px;
 }

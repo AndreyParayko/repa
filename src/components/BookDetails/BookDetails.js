@@ -1,43 +1,54 @@
 import React from "react";
-import Book from "../../assets/Images/Book.png";
-import { getBooks } from "../../api/books";
+import { getBookById } from "../../api/books";
+import BookDetailsItem from "../BookDetailsItem";
+import Loader from "../Loader";
+import parse from "date-fns/parse";
+import format from "date-fns/format";
+import { fotmatedDescription } from "./Utils";
 
 class BookDetails extends React.Component {
   state = {
-    books: []
+    data: [],
+    isLoading: true,
+    isError: false
   };
   componentDidMount() {
-    getBooks().then(res => {
-      console.log(res);
-      this.setState({ books: res });
-    });
+    const { id } = this.props.match.params;
+    getBookById(id)
+      .then(data =>
+        this.setState({
+          data: data,
+          isLoading: false
+        })
+      )
+      .catch(rej => {
+        console.log("Error in parsing module", rej);
+        this.setState({ isError: true });
+      });
   }
+
   render() {
+    const { data, isLoading } = this.state;
+    console.log(data);
+    let parsedDate = parse(data.PublishDate);
+    let formatedDate = format(parsedDate, "DD MMMM YYYY");
+
+    console.log(formatedDate);
     return (
-      <div className="container">
-        {this.state.books.map(book => {
-          return (
-            <div className="content">
-              <div className="text-center">
-                <h1 key={book.ID}>Book Title: {book.Title}</h1>
-                <img src={Book} className="rounded" />
-                <br />
-                <p>
-                  <h3 key={book.ID}>PublishDate: {book.PublishDate}</h3>
-                </p>
-                <p>
-                  <h3 key={book.ID}>Description: {book.Description}</h3>
-                </p>
-                <p>
-                  <h3 key={book.ID}>Nuber of pages: {book.PageCount}</h3>
-                </p>
-                <span className="text-secondary" key={book.ID}>
-                  {book.Excerpt}
-                </span>
-              </div>
-            </div>
-          );
-        })}
+      <div>
+        {!isLoading && (
+          <div className="container">
+            <BookDetailsItem
+              title={data.Title}
+              description={fotmatedDescription(data.Description)}
+              id={data.ID}
+              pageCount={data.PageCount}
+              publishDate={formatedDate}
+              excerpt={data.Excerpt}
+            />
+          </div>
+        )}
+        {isLoading && <Loader />}
       </div>
     );
   }

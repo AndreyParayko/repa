@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from "../../assets/Images/logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return(
@@ -8,22 +9,19 @@ const Header = () => {
   <div className="collapse navbar-collapse" id="navbarText">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item">
-        <a className="nav-link" href="#">Home </a>
+        <Link to="/"><a className="nav-link">Home </a></Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Books</a>
+      <Link to="/books-page"><a className="nav-link" href="#">Books</a></Link>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">About</a>
       </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
     </ul>
-    <span className="navbar-brand">
+    <Link to="/"><span className="navbar-brand">
       BookHub
     </span>
-    <img src={Logo} width="60px"	 alt="..." />
+    <img src={Logo} width="60px"	 alt="..." /></Link>
   </div>
 </nav>
 

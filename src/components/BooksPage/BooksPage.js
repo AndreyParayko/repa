@@ -1,40 +1,48 @@
 import React from "react";
-import Book from "../../assets/Images/Book.png";
+import BookItem from "../BookItem";
 import { getBooks } from "../../api/books";
+import Pagination from "../Pagination";
+import Loader from "../Loader";
+
 class BooksPage extends React.Component {
   state = {
-    books: []
+    data: [],
+    isLoading: true,
+    isError: false
   };
   componentDidMount() {
-    getBooks().then(res => {
-      console.log(res);
-      this.setState({ books: res });
-    });
+    getBooks()
+      .then(data =>
+        this.setState({
+          data: data,
+          isLoading: false
+        })
+      )
+      .catch(rej => {
+        console.log("Error in parsing module", rej);
+        this.setState({ isError: true });
+      });
   }
+
   render() {
+    const { data, isLoading } = this.state;
     return (
-      <div className="container">
-        <div className="row">
-          {this.state.books.map(book => {
-            return (
-            <div className="col-md-4 my-5">
-              <div className="card">
-                <img src={Book} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title" key={book.ID}>
-                    Book Title: {book.Title}
-                  </h5>
-                  <p className="card-text" key={book.ID}>
-                  {book.Description}
-                  </p>
-                  <a href="#" className="btn btn-primary">
-                    More
-                  </a>
-                </div>
-              </div>
+      <div>
+        {!isLoading && (
+          <div className="container">
+            <div className="row">
+              {data.map(item => (
+                <BookItem
+                  title={item.Title}
+                  description={item.Description}
+                  id={item.ID}
+                />
+              ))}
             </div>
-          )})}
-        </div>
+          </div>
+        )}
+        {isLoading && <Loader />}
+        <Pagination />
       </div>
     );
   }
