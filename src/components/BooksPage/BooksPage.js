@@ -8,7 +8,8 @@ class BooksPage extends React.Component {
   state = {
     data: [],
     isLoading: true,
-    isError: false
+    isError: false,
+    currentPage: 1
   };
   componentDidMount() {
     getBooks()
@@ -24,14 +25,28 @@ class BooksPage extends React.Component {
       });
   }
 
+  handler = number => {
+    console.log("handle|: ", number);
+    this.setState({
+      currentPage: number
+    });
+  };
+
   render() {
-    const { data, isLoading } = this.state;
+    const { isLoading, data } = this.state;
+    const postsPerPage = 21;
+
+    const indexOfLastPost = this.state.currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+    console.log(this.state.currentPage);
+
     return (
       <div>
         {!isLoading && (
           <div className="container">
             <div className="row">
-              {data.map(item => (
+              {currentPosts.map(item => (
                 <BookItem
                   title={item.Title}
                   description={item.Description}
@@ -42,7 +57,11 @@ class BooksPage extends React.Component {
           </div>
         )}
         {isLoading && <Loader />}
-        <Pagination />
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={data.length}
+          handler={this.handler}
+        />
       </div>
     );
   }
