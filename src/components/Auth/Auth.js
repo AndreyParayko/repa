@@ -5,9 +5,9 @@ class Auth extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        username: "",
-        password: ""
-      };
+      username: "",
+      password: ""
+    };
   }
 
   handleChange = (event) => {
@@ -18,23 +18,28 @@ class Auth extends React.Component {
     this.setState({
       [name]: value
     });
-  }
+  };
 
   cookies = new Cookies();
 
   handleSubmit = (event) => {
-    if (this.state.username==="admin" && this.state.password==="admin") {
-        this.cookies.set('login','logined');
-       this.props.history.push('/');
-    }
     event.preventDefault();
-  }
+    if (this.state.username === "admin" && this.state.password === "admin") {
+      this.cookies.set("login", "logined");
+      this.props.loginHandler();
+      this.props.history.push("/");
+    }
+  };
   render() {
     return (
       <div id="authForm">
         <div class="container">
           <div class="wrapper">
-            <form name="Login_Form" class="form-signin" onSubmit={this.handleSubmit}>
+            <form
+              name="Login_Form"
+              class="form-signin"
+              onSubmit={this.handleSubmit}
+            >
               <h3 class="form-signin-heading text-muted">Please Sign In</h3>
               <hr class="colorgraph" />
               <br />
@@ -56,10 +61,7 @@ class Auth extends React.Component {
                 onChange={this.handleChange}
               />
 
-              <button
-                class="btn btn-lg btn-primary btn-block"
-                type="submit"
-              >
+              <button class="btn btn-lg btn-primary btn-block" type="submit">
                 Login
               </button>
             </form>
