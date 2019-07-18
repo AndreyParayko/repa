@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import BooksPage from "./components/BooksPage";
 import Footer from "./components/Footer";
 import Auth from "./components/Auth";
+import Feedback from "./components/Feedback";
 import BookDetails from "./components/BookDetails";
 import ErrorPage from "./components/ErrorPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -47,12 +48,14 @@ class App extends React.Component {
               exact
             />
             <Route path="/" component={HomePage} exact />
+            <Route path="/feedback" component={Feedback} exact />
             <Route path="/books-page" component={BooksPage} exact />
             <Route path="/book-details/:id" component={BookDetails} exact />
             <Route component={ErrorPage} />
           </Switch>
+          </div>
           <Footer />
-        </div>
+       
       </Router>
     );
   }

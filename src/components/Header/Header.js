@@ -1,8 +1,10 @@
 import React from "react";
 import Logo from "../../assets/Images/logo.png";
 import { Link } from "react-router-dom";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 
-const Header = ({ isLogin, loginToggler }) => {
+const Header = ({loginToggler }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="collapse navbar-collapse" id="navbarText">
@@ -18,7 +20,12 @@ const Header = ({ isLogin, loginToggler }) => {
             </Link>
           </li>
           <li className="nav-item">
-            {isLogin === true ? (
+            <Link to="/feedback">
+              <a className="nav-link">Feedback</a>
+            </Link>
+          </li>
+          <li className="nav-item">
+            {cookies.get("login")? (
               <Link to="/login" onClick={loginToggler}>
                 {" "}
                 <a className="nav-link">Logout</a>

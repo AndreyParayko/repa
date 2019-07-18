@@ -13,6 +13,14 @@ body {
 .footer {
   background: #343a40;
   padding: 10px 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+.fullsize {
+  padding-bottom: 130px;
 }
 .footer a {
   color: #70726f;
@@ -50,20 +58,14 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-// .form-center {
-//   width: 300px;
-//   margin-top: 200px;
-//   margin-bottom: 200px;
-//   background-color: #6a6f74;
-//   border-radius: 50px;
-// }
 
 #authForm {
-  background-color: #343a40;
-  margin: 0 670px 257px;
+  // background-color: #343a40;
+ //margin: 0 670px 257px;
   border-radius: 50px;
   padding-bottom: 15px ;
   h3{
+    color: #000;
     padding-top:25px;
   }
   button{
@@ -72,13 +74,33 @@ body {
   input{
     margin: 3px;
   }
-  .wrapper {
-    margin-top: 80px;
-    margin-bottom: 20px;
-  }
 
   form {
     width: 320px;
     margin: 0 auto;
   }
+}
+#veginas {
+  width: 100%;
+}
+.form-content {
+  width: 50%;
+
+}
+.contact-form{ margin-top:15px;}
+.contact-form .textarea{ min-height:220px; resize:none;}
+.form-control{ box-shadow:none; border-color:#eee; height:49px;}
+.form-control:focus{ box-shadow:none; border-color:#2864b3;}
+.form-control-feedback{ line-height:50px;}
+.main-btn{ background:#2864b3; border-color:#2864b3; color:#fff;}
+.main-btn:hover{ background:#2864b3;color:#fff;}
+.form-control-feedback {
+line-height: 50px;
+top: 0px;
+}
+#about {
+  padding-top: 40px;
+}
+.text-red {
+  color: red;
 }

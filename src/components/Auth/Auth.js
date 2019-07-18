@@ -33,14 +33,14 @@ class Auth extends React.Component {
   render() {
     return (
       <div id="authForm">
-        <div class="container">
-          <div class="wrapper">
+    <div className="content">
+              <div className="text-center text-muted">
             <form
               name="Login_Form"
               class="form-signin"
               onSubmit={this.handleSubmit}
             >
-              <h3 class="form-signin-heading text-muted">Please Sign In</h3>
+              <h3 class="form-signin-heading">Please Sign In</h3>
               <hr class="colorgraph" />
               <br />
 
