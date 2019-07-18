@@ -5,6 +5,7 @@ import Loader from "../Loader";
 import parse from "date-fns/parse";
 import format from "date-fns/format";
 import { fotmatedDescription } from "./Utils";
+import loginRequire from "../hoc/loginRequire";
 
 class BookDetails extends React.Component {
   state = {
@@ -53,4 +54,4 @@ class BookDetails extends React.Component {
     );
   }
 }
-export default BookDetails;
+export default loginRequire(BookDetails);

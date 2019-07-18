@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  position:relative; 
+  position: relative;
   min-height: 100%;
   background-image: url(./assets/Images/bg.jpg);
   background-size: 100% 100%;
@@ -15,14 +15,14 @@ body {
   padding: 10px 0;
 }
 .footer a {
-  color: #70726F;
+  color: #70726f;
   font-size: 20px;
   padding: 10px;
-  border-right: 1px solid #70726F;
-  transition: all .5s ease;
+  border-right: 1px solid #70726f;
+  transition: all 0.5s ease;
 }
 .footer a:first-child {
-  border-left: 1px solid #70726F;
+  border-left: 1px solid #70726f;
 }
 .footer a:hover {
   color: white;
@@ -36,10 +36,49 @@ body {
   margin-bottom: 100px;
   margin-top: 100px;
 }
-.homeImage{
+.homeImage {
   margin-bottom: 30px;
   margin-top: 30px;
 }
 #bottom {
   margin-top: 20px;
+}
+#rcorners {
+  border-radius: 25px;
+  background: #343a40;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+// .form-center {
+//   width: 300px;
+//   margin-top: 200px;
+//   margin-bottom: 200px;
+//   background-color: #6a6f74;
+//   border-radius: 50px;
+// }
+
+#authForm {
+  background-color: #343a40;
+  margin: 0 670px 257px;
+  border-radius: 50px;
+  padding-bottom: 15px ;
+  h3{
+    padding-top:25px;
+  }
+  button{
+    margin-top: 15px;
+  }
+  input{
+    margin: 3px;
+  }
+  .wrapper {
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 320px;
+    margin: 0 auto;
+  }
 }

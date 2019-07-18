@@ -3,6 +3,7 @@ import BookItem from "../BookItem";
 import { getBooks } from "../../api/books";
 import Pagination from "../Pagination";
 import Loader from "../Loader";
+import loginRequire from "../hoc/loginRequire";
 
 class BooksPage extends React.Component {
   state = {
@@ -67,4 +68,4 @@ class BooksPage extends React.Component {
   }
 }
 
-export default BooksPage;
+export default loginRequire(BooksPage);

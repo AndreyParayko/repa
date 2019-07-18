@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from "../../assets/Images/home.png";
 import { Link } from "react-router-dom";
+import loginRequire from "../hoc/loginRequire";
 const HomePage = () => (
     <div className="content">
     <div className="text-center">
@@ -12,4 +13,4 @@ const HomePage = () => (
   </div>
   );
   
-  export default HomePage;
+  export default loginRequire(HomePage);

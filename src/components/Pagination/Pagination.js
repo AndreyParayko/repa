@@ -34,4 +34,3 @@ const Pagination = ({ handler, postsPerPage, totalPosts }) => {
 };
 
 export default Pagination;
-//<a onClick={() => handler(number)} className="page-link">
