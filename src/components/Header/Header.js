@@ -6,25 +6,25 @@ const cookies = new Cookies();
 
 const Header = ({loginToggler }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="collapse navbar-collapse" id="navbarText">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
+    <div className="nav-bg text-muted">
+    <div class="d-flex justify-content-around">
+
+          <p className="p-2 bd-highlight">
             <Link to="/">
               <a className="nav-link">Home </a>
             </Link>
-          </li>
-          <li className="nav-item">
+          </p>
+          <p className="p-2 bd-highlight">
             <Link to="/books-page">
               <a className="nav-link">Books</a>
             </Link>
-          </li>
-          <li className="nav-item">
+          </p>
+          <p className="p-2 bd-highlight">
             <Link to="/feedback">
               <a className="nav-link">Feedback</a>
             </Link>
-          </li>
-          <li className="nav-item">
+          </p>
+          <p className="p-2 bd-highlight">
             {cookies.get("login")? (
               <Link to="/login" onClick={loginToggler}>
                 {" "}
@@ -36,14 +36,13 @@ const Header = ({loginToggler }) => {
                 <a className="nav-link">Login</a>
               </Link>
             )}
-          </li>
-        </ul>
+          </p>
         <Link to="/">
           <span className="navbar-brand">BookHub</span>
           <img src={Logo} width="60px" alt="..." />
         </Link>
-      </div>
-    </nav>
+    </div>
+    </div>
   );
 };
 
