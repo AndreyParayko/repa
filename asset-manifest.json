@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/repa/static/css/main.b4cc4f61.chunk.css",
+    "main.js": "/repa/static/js/main.3e0482b6.chunk.js",
+    "main.js.map": "/repa/static/js/main.3e0482b6.chunk.js.map",
+    "runtime~main.js": "/repa/static/js/runtime~main.6fed7735.js",
+    "runtime~main.js.map": "/repa/static/js/runtime~main.6fed7735.js.map",
+    "static/css/2.510409cd.chunk.css": "/repa/static/css/2.510409cd.chunk.css",
+    "static/js/2.de827483.chunk.js": "/repa/static/js/2.de827483.chunk.js",
+    "static/js/2.de827483.chunk.js.map": "/repa/static/js/2.de827483.chunk.js.map",
+    "index.html": "/repa/index.html",
+    "precache-manifest.ef0cc23c658f39518a0fb48fa54c58cb.js": "/repa/precache-manifest.ef0cc23c658f39518a0fb48fa54c58cb.js",
+    "service-worker.js": "/repa/service-worker.js",
+    "static/css/2.510409cd.chunk.css.map": "/repa/static/css/2.510409cd.chunk.css.map",
+    "static/css/main.b4cc4f61.chunk.css.map": "/repa/static/css/main.b4cc4f61.chunk.css.map",
+    "static/media/Book.png": "/repa/static/media/Book.27d77758.png",
+    "static/media/Gif.gif": "/repa/static/media/Gif.07fa811b.gif",
+    "static/media/App.scss": "/repa/static/media/bg.9882bb67.jpg",
+    "static/media/error.gif": "/repa/static/media/error.b87d1575.gif",
+    "static/media/home.png": "/repa/static/media/home.daecacdc.png",
+    "static/media/logo.png": "/repa/static/media/logo.5b3a3d82.png"
+  }
+}
