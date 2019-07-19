@@ -10,7 +10,7 @@ const Header = ({loginToggler }) => {
     <div class="d-flex justify-content-around">
 
           <p className="p-2 bd-highlight">
-            <Link to="/">
+            <Link to="/repa/">
               <a className="nav-link">Home </a>
             </Link>
           </p>

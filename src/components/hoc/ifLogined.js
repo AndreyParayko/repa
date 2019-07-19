@@ -7,12 +7,12 @@ function ifLogined(Component) {
   class LoginedCheck extends React.Component {
     componentDidMount() {
       if (cookies.get("login")) {
-        this.props.history.push("/");
+        this.props.history.push("/repa/");
       }
     }
     componentDidUpdate() {
       if (cookies.get("login")) {
-        this.props.history.push("/");
+        this.props.history.push("/repa/");
       }
     }
     render() {
