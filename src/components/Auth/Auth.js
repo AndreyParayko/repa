@@ -42,6 +42,7 @@ class Auth extends React.Component {
             >
               <h3 class="form-signin-heading">Please Sign In</h3>
               <hr class="colorgraph" />
+              <p>To pass write admin:admin</p>
               <br />
 
               <input
