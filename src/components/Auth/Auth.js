@@ -27,7 +27,7 @@ class Auth extends React.Component {
     if (this.state.username === "admin" && this.state.password === "admin") {
       this.cookies.set("login", "logined");
       this.props.loginHandler();
-      this.props.history.push("/");
+      this.props.history.push("/BookHub/");
     }
   };
   render() {
